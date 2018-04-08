@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700');
+
+body {
+	font-family: 'Raleway';
+	margin-top: 50px;
+}
+
+h1 {
+	font-weight: 700;
+	display: inline;
+	color: #42C0FB;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.Header {
+	margin-bottom: 50px;
+}
+
+header img {
+	display: inline;
+	width: 60px;
+	position: relative;
+	bottom: 10px;
+	margin-right: 20px;
+}
+
+header {
+	width: 100%;
+}
+
+.header__logo, .searchbar__form, .header__favoriteslink {
+	float: left;
+}
+
+.header__favoriteslink {
+	font-size: 14px;
+	text-decoration: underline;
+	color: blue;
+	position: relative;
+	top: 12px;
+}
+
+.Beer, .Beer--favorite {
+	padding: 15px;
+	background: #FEFEFE;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.04);
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+.Beer--favorite {
+	border: 1px solid #81B8D6;
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.Beer span,
+.Beer--favorite span {
+	display: block;
+	font-size: 14px;
+}
+
+.beer__image, .beer__info {
+	float: left;
+	padding: 0;
+}
+
+.beer__image img {
+	max-height: 130px;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.col-md-2 {
+	text-align: right;
+}
+
+span.beer__name {
+	font-weight: 700;
+	font-size: 16px;
+	margin-bottom: 6px;
+}
+
+span.beer__tagline {
+	margin-bottom: 10px;
+}
+
+.FavoriteButton img {
+	width: 26px;
+	cursor: pointer;
+	position: relative;
+	top: 104px;
+	right: 3px;
+}
