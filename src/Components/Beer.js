@@ -10,6 +10,15 @@ class Beer extends Component {
 
 	render() {
 		return (
+			<div className={"Beer" + (this.props.isFavorite ? "--favorite" : "")}>
+				<div className="beer__image col-3">
+				</div>
+			</div>
+		)
+	}
+
+	render() {
+		return (
 			<div className={"Beer" + (this.props.isFavorite ? : "--favorite" : "")}>
 				<div className="beer__image col-3">
 				</div>
