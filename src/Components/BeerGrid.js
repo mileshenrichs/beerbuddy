@@ -7,6 +7,10 @@ class BeerGrid extends Component {
 		this.props.handleFavorite(beerId);
 	}
 
+	isFavorite(beerToCheck) {
+		return this.props.favorites.find(beer => beer.id === beerToCheck.id);
+	}
+
   render() {
 	let beerRows;
 	if(this.props.beers) {
@@ -16,7 +20,7 @@ class BeerGrid extends Component {
 					<Beer
 						beer={beer}
 						handleFavorite={this.handleFavorite.bind(this)}
-						isFavorite={this.props.favorites.includes(beer)}
+						isFavorite={this.isFavorite(beer)}
 					/>
 				</div>
 			);
