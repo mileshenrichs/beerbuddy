@@ -2,56 +2,6 @@ import React, { Component } from 'react';
 import heartFavorited from '../heart-favorited.png';
 import heart from '../heart.png';
 
-
-class Beer extends Component {
-
-	handleFavorite() {
-		this.props.handleFavorite(this.props.beer.id);
-	}
-
-	render() {
-		return (
-			<div className={"Beer" + (this.props.isFavorite ? "--favorite" : "")}>
-				<div className="beer__image col-3">
-				</div>
-			</div>
-		)
-	}
-}
-
-
-class Beer extends Component {
-
-
-    handleFavorite() {
-        this.props.handleFavorite(this.props.beer.id);
-    }
-
-
-	handleFavorite() {
-		this.props.handleFavorite(this.props.beer.id);
-	}
-
-	render() {
-		return (
-			<div className={"Beer" + (this.props.isFavorite ? "--favorite" : "")}>
-				<div className="beer__image col-3">
-				</div>
-			</div>
-		)
-	}
-
-	render() {
-		return (
-			<div className={"Beer" + (this.props.isFavorite ? : "--favorite" : "")}>
-				<div className="beer__image col-3">
-				</div>
-			</div>
-		)
-	}
-}
-
-
 class Beer extends Component {
 
 	handleFavorite() {
