@@ -3,6 +3,10 @@ import Favorite from './Favorite';
 
 class Favorites extends Component {
 
+		componentDidMount() {
+			document.title = 'My Favorites';
+		}
+
 		removeFavorite(favoriteId) {
 			this.props.handleFavorite(favoriteId);
 		}

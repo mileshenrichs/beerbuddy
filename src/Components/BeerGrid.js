@@ -3,6 +3,10 @@ import Beer from './Beer';
 
 class BeerGrid extends Component {
 
+	componentDidMount() {
+		document.title = 'BeerBuddy';
+	}
+
 	handleFavorite(beerId) {
 		this.props.handleFavorite(beerId);
 	}
