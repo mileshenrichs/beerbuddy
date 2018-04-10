@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../logo.png';
 import SearchBar from './SearchBar';
 
@@ -14,10 +15,10 @@ class Header extends Component {
 			<header>
 				<div className="header__logo col-md-6">
 					<img src={logo} alt="BeerBuddy" />
-					<a href="#"><h1>BeerBuddy</h1></a>
+					<h1><Link to="/">BeerBuddy</Link></h1>
 				</div>
 				<div className="header__favoriteslink col-md-2">
-					<a href="#">My favorites ({this.props.favorites.length})</a>
+					<Link to="/favorites">My favorites ({this.props.favorites.length})</Link>
 				</div>
 				<SearchBar searchTerm={this.props.searchTerm} handleSearchChange={this.handleSearchChange.bind(this)} />
 			</header>

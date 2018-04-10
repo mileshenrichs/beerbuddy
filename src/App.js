@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import {Route, Switch} from 'react-router-dom';
 import './App.css';
 import Header from './Components/Header';
 import BeerGrid from './Components/BeerGrid';
+import Favorites from './Components/Favorites';
 
 class App extends Component {
 
@@ -114,7 +116,7 @@ class App extends Component {
 	handleFavorite(beerId) {
 		let beer = this.state.beers.find(beer => beer.id === beerId);
 		let favorites = this.state.favorites;
-		if(favorites.includes(beer)) {
+		if(favorites.find(beer => beer.id === beerId)) {
 			favorites.splice(favorites.indexOf(beer), 1);
 		} else {
 			favorites.push(beer);
@@ -131,11 +133,28 @@ class App extends Component {
 					handleSearchChange={this.handleSearchChange.bind(this)}
 					favorites={this.state.favorites}
 				/>
-				<BeerGrid
-					beers={this.state.beers}
-					favorites={this.state.favorites}
-					handleFavorite={this.handleFavorite.bind(this)}
-				/>
+				<Switch>
+					<Route 
+						exact path="/"
+						component={() => (
+									<BeerGrid
+										beers={this.state.beers}
+										favorites={this.state.favorites}
+										handleFavorite={this.handleFavorite.bind(this)}
+									/>
+							)}
+					/>
+					<Route
+						exact path="/favorites"
+						component={() => (
+									<Favorites
+										favorites={this.state.favorites}
+										handleFavorite={this.handleFavorite.bind(this)}
+									/>
+							)}
+					/>
+				</Switch>
+				
 			</div>
       </div>
     );

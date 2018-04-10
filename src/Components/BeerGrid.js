@@ -16,7 +16,7 @@ class BeerGrid extends Component {
 	if(this.props.beers) {
 		beerRows = this.props.beers.map(beer => {
 			return (
-				<div className="col-md-4">
+				<div key={beer.id} className="col-md-4">
 					<Beer
 						beer={beer}
 						handleFavorite={this.handleFavorite.bind(this)}
